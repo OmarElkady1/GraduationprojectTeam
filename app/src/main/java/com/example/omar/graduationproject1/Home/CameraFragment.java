@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import com.example.omar.graduationproject1.R;
 /**
  * Created by User on 5/28/2017.
+ * test
+ * omar
  */
 
 public class CameraFragment extends Fragment {

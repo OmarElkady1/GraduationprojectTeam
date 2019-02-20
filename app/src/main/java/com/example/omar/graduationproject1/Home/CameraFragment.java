@@ -11,7 +11,8 @@ import com.example.omar.graduationproject1.R;
 /**
  * Created by User on 5/28/2017.
  * test
- * omar
+ * 3laa
+ * 7amdy
  */
 
 public class CameraFragment extends Fragment {

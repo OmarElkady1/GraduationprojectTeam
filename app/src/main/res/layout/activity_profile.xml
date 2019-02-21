@@ -9,6 +9,8 @@
         android:layout_height="match_parent">
 
         <include layout="@layout/snippet_top_prolfilebar"/>
+        <include layout="@layout/layout_bottom_navigation_view"/>
+
 
     </RelativeLayout>
 

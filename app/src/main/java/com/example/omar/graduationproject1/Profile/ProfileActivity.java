@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 import com.example.omar.graduationproject1.R;
 import com.example.omar.graduationproject1.Utils.BottomNavigationViewHelper;
@@ -21,12 +22,16 @@ public class ProfileActivity extends AppCompatActivity{
     private static final int ACTIVITY_NUM = 4;
 
     private Context mContext = ProfileActivity.this;
+    private ProgressBar mprogressBar;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         Log.d(TAG, "onCreate: started.");
+        mprogressBar =(ProgressBar)findViewById(R.id.profileProgressBar);
+        mprogressBar.setVisibility(View.GONE);
 
         setupBottomNavigationView();
         setupToolbar();

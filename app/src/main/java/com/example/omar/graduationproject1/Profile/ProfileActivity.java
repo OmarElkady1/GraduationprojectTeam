@@ -1,6 +1,7 @@
 package com.example.omar.graduationproject1.Profile;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.example.omar.graduationproject1.R;
 import com.example.omar.graduationproject1.Utils.BottomNavigationViewHelper;
@@ -33,17 +36,13 @@ public class ProfileActivity extends AppCompatActivity{
         Toolbar toolbar = (Toolbar) findViewById(R.id.profileToolBar);
         setSupportActionBar(toolbar);
 
-        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+        ImageView prfileMenu = (ImageView)findViewById(R.id.profileMenu);
+        prfileMenu.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                Log.d(TAG, "onMenuItemClick: clicked menu item: " + item);
-
-                switch (item.getItemId()){
-                    case R.id.profileMenu:
-                        Log.d(TAG, "onMenuItemClick: Navigating to Profile Preferences.");
-                }
-
-                return false;
+            public void onClick(View v) {
+                Log.d(TAG,"onclick : navigating to Acouunt Settings");
+                Intent intent = new Intent(mContext,AccountSettingsActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -61,9 +60,4 @@ public class ProfileActivity extends AppCompatActivity{
         menuItem.setChecked(true);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.profile_menu, menu);
-        return true;
-    }
 }

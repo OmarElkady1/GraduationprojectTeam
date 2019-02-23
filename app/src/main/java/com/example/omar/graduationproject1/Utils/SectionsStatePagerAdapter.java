@@ -10,9 +10,9 @@ import java.util.List;
 
 public class SectionsStatePagerAdapter extends FragmentStatePagerAdapter {
 
-   private final List<Fragment> mfragmentList= new ArrayList<>();
-   private final HashMap<Fragment,Integer> mfragments = new HashMap<>();
-   private  final  HashMap<String,Integer>mftagmentNumber=new HashMap<>();
+    private final List<Fragment> mfragmentList= new ArrayList<>();
+    private final HashMap<Fragment,Integer> mfragments = new HashMap<>();
+    private  final  HashMap<String,Integer>mftagmentNumber=new HashMap<>();
     private  final  HashMap<Integer,String>mftagmentName=new HashMap<>();
     public SectionsStatePagerAdapter(FragmentManager fm) {
         super(fm);

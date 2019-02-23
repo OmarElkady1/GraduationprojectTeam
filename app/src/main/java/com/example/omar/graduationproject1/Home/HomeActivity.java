@@ -10,10 +10,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.omar.graduationproject1.Utils.SectionsPagerAdapter;
+import com.example.omar.graduationproject1.Utils.UniversalImageLoader;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
 import com.example.omar.graduationproject1.R;
 import com.example.omar.graduationproject1.Utils.BottomNavigationViewHelper;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -30,6 +32,15 @@ public class HomeActivity extends AppCompatActivity {
 
         setupBottomNavigationView();
         setupViewPager();
+
+        initImageLoader();
+    }
+
+    private  void initImageLoader(){
+
+        UniversalImageLoader universalImageLoader =new UniversalImageLoader(mContext);
+        ImageLoader.getInstance().init(universalImageLoader.getConfig());
+
     }
 
     /**
